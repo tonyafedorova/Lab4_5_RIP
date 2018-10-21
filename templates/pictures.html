@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+
+
+{% block title %}Pictures{% endblock %}
+
+{% block content %}
+    <div class="container" style="max-width: 800px">
+        <div class="jumbotron">
+            <div class="row">
+                {% for pic in pictures %}
+                    <div class="col-md-6">
+                        <div class="thumbnail">
+{#                            <h4>{{ pic. }} <span class="pull-right">{{ image.published }}</span></h4>#}
+                            <img src="{{ pic.pic }}">
+                            <div class="caption">
+                                <p>{{ pic.text }}</p>
+                                <p>
+{#                                    <a href="#" class="btn btn-default" role="button"><span#}
+{#                                        class="glyphicon glyphicon-heart"></span> {{ image.likes_count }}#}
+{#                                    </a>#}
+                                </p>
+                                <p>{{ pic.price }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+       </div>
+    </div>
+{% endblock %}
