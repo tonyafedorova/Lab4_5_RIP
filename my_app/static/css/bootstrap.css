@@ -107,7 +107,7 @@ pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
-  background-color: #b2dba1;
+  background-color: #000000;
 
 }
 button,
@@ -1102,6 +1102,11 @@ a {
   color: #337ab7;
   text-decoration: none;
 }
+a.list1{
+   font-size: 30px;
+    color: #0f0f0f;
+}
+
 a:hover,
 a:focus {
   color: #23527c;
@@ -1197,7 +1202,7 @@ h2,
   font-weight: 900;
   font-size: 30px;
   line-height: 1.5;
-  color: #afd9ee;
+  color: #d58512;
 }
 h1 small,
 h2 small,
@@ -1226,6 +1231,26 @@ h6 .small,
   font-weight: normal;
   line-height: 1;
   color: #777;
+}
+
+new-list {
+  display: block;
+}
+
+
+pre.biography{
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-family: monospace;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #E6E6FA;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 h1,
 .h1,
@@ -1583,10 +1608,12 @@ pre {
   color: #333;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #ffffe5;
+  background-color: #ffefd5;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+
 pre code {
   padding: 0;
   font-size: inherit;

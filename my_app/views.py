@@ -29,9 +29,19 @@ def first(request):
 def pictures(request):
     picture = [
         {
-            'pic': "IMG_2857.jpg",
+            # 'pic': "",
             'text': 'Нью-Йорк',
-            'price': 'Цена: 500 рублей'
+            'price': 500
+        },
+        {
+            # 'pic': "",
+            'text': 'Венеция',
+            'price': 600
+        },
+        {
+            # 'pic': "",
+            'text': 'Фреди',
+            # 'price': 800
         },
     ]
     return render(request, 'pictures.html', context={'pictures': picture})
