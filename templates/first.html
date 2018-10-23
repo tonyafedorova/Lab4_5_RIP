@@ -4,17 +4,17 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <h1 >{{ first.phrase }}</h1>
-    <h2>{{ first.text }}</h2>
-    <pre>{{ first.big_text }} </pre>
+    <h1 >P.A.stel</h1>
+    <h2>Сайт картин Пустовой Анны</h2>
+    <pre>     Эти картины написаны мной под впечатлением, увиденного в разных уголках мира.
+    Я в своих работах не переворачиваю мир вверх ногами и не создаю фантасмагорий. </pre>
     <div class="container-fluid">
         <ul>
-            <li class="new-list"><a class="list1" href="/pictures">Детство</a></li>
-            <pre class="biography">hubhjbjhv</pre>
-            <li class="new-list"><a class="list1" href="/goto">Образование</a></li>
-            <pre class="biography">hubhjbjhv</pre>
-            <li class="new-list"><a class="list1" href="/ttt">Творчество</a></li>
-            <pre class="biography">hubhjbjhv</pre>
+            {% for bio in bios %}
+                {% include 'forinclude.html' with el=bio %}
+            {% empty %}
+               <li>Пустой список</li>
+            {% endfor %}
         </ul>
     </div>
 {% endblock %}

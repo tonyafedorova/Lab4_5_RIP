@@ -16,13 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from my_app.views import function_view, ExampleClassBased, first, pictures
+from my_app.views import first, pictures, bios
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # url(r'^function_view/', function_view),
-    # url(r'^class_based_view/', ExampleClassBased.as_view()),
     url(r'^$', first),
-    url(r'^pictures/', pictures)
+    url(r'^pictures/', pictures),
+    path('bio/<name>/', bios, name='bio_url')
 
 ]
