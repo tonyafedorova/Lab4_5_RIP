@@ -102,6 +102,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'lab5',
+        'USER': 'tonya',
+        'PASSWORD': '171064',
+        'HOST': 'localhost',
+        'PORT': 3306,  # Стандартный порт MySQL
+        'OPTIONS': {'charset': 'utf8'},
+        'TEST_CHARSET': 'utf8',
+    }
+}
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
