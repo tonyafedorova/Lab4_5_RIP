@@ -53,14 +53,14 @@ import MySQLdb
 # con = Connection("tonya", "171064", "lab5")
 #
 # with con:
-#     customer = Customer(con, "Антонина", "Федорова")
+#     customer = Customer(con, "Сергей", "Алексеев")
 #     customer.save()
-#
 
 
 class CustomerModel(models.Model):
     name = models.CharField(max_length=30)
     surname = models.CharField(max_length=30)
+
 
 
 class PictureModel(models.Model):
@@ -69,6 +69,7 @@ class PictureModel(models.Model):
 
 
 class PurchaseModel(models.Model):
-    idcustomer = models.IntegerField(max_length=11)
-    idpicture = models.IntegerField(max_length=11)
+    idcustomer = models.IntegerField()
+    idpicture = models.IntegerField()
+
 

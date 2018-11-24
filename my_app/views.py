@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic import TemplateView
+
 
 
 # Create your views here.
 from django.views import View
+
+from my_app.models import CustomerModel
 
 
 def first(request):
@@ -40,3 +44,21 @@ def bios(request, name):
     }
 
     return render(request, 'bio.html', data)
+
+
+class Profile(TemplateView):
+    template_name = "Profile.html"
+
+    def get(self, request):
+        data = CustomerModel.objects.all()
+        return render(request, 'Profile.html', context={'data': data})
+
+
+class forLab5(TemplateView):
+    template_name = "forLab5.html"
+
+    def get(self, request):
+        data = CustomerModel.objects.all()
+        return render(request, 'forLab5.html', context={'data': data})
+
+
